@@ -42,7 +42,7 @@ def forward(image_number):
 
     #update status
     status = Label(root, text="Image " + str(image_number) + " of " + str(len(image_list)), bd=1, relief=SUNKEN, anchor=E)
-    status.grid(row=2, column=0, columnspan=3, sticky=W+E)
+    status.grid(row=2, column=0, columnspan=3, sticky=W+E, padx=5)
     
 def back(image_number):
     global my_label
@@ -63,7 +63,7 @@ def back(image_number):
 
     #update status
     status = Label(root, text="Image " + str(image_number) + " of " + str(len(image_list)), bd=1, relief=SUNKEN, anchor=E)
-    status.grid(row=2, column=0, columnspan=3, sticky=W+E)
+    status.grid(row=2, column=0, columnspan=3, sticky=W+E, padx=5)
 
 #create a quit button
 button_quit = Button(root, text="Exit Program", command=root.quit)
@@ -78,7 +78,7 @@ button_quit.grid(row=1, column=1)
 button_forward.grid(row=1,column=2, pady=10)
 
 #place label
-status.grid(row=2, column=0, columnspan=3, sticky=W+E, padx=3)
+status.grid(row=2, column=0, columnspan=3, sticky=W+E, padx=5)
 
 
 root.mainloop()
